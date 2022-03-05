@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>login</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container" style="width: 35%; margin-top: 100px;">
+		<h1 style="text-align: center; margin-bottom: 25px">Login</h1>
+		<form method="POST" action="/api/login">
+			<input class="form-control form-control-lg" style="margin-bottom: 20px;" type="text" placeholder="username" name="username" aria-label=".form-control-lg example" required>
+			<input class="form-control form-control-lg" style="margin-bottom: 20px;" type="password" placeholder="password" name="password" aria-label=".form-control-lg example" required>
+			<button type="submit" class="btn btn-primary" style="width: 100%; text-align: center; font-size: 25px;">login</button>
+			{% if captcha %}
+	    		<div class="captcha-container" style="display: inline-flex; width: 100%; margin: 25px auto; padding: 20px 0; background-color: #cdedfd; border-radius: 5px;">
+					<div class="multiplier" style="font-size: 27px; margin-right: 5px; margin-left: 195px;">{{multiplier}}</div>
+					<div class="op" style="font-size: 27px; margin-right: 5px;">x</div>
+					<div class="multiplicand" style="font-size: 27px;">{{multiplicand}}</div>
+				</div>
+				<input class="form-control form-control-lg" style="margin-bottom: 20px;" type="text" placeholder="captcha answer" name="captcha" aria-label=".form-control-lg example" required>
+			{% endif %}
+		</form>
+	</div>
+</body>
+</html>
