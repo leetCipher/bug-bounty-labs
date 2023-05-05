@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>check site availability</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+	<h1 style="text-align: center; margin: 35px 20px;">Check Site Availability</h1>
+	<div style="width: 60%; margin: auto;">
+		<form method="POST" action="/check-status">
+			<input type="text" class="form-control" name="site" placeholder="e.g: google.com" style="font-size: 25px;">
+			<button type="submit" class="btn btn-info" style="width: 100%; color: #FFF; font-size: 30px; margin-top: 25px;">Check Status</button>
+		</form>
+	</div>
+</body>
+</html>
